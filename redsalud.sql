@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `redsalud`
 --
-CREATE DATABASE IF NOT EXISTS `redsalud` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS `redsalud` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
 USE `redsalud`;
 
 -- --------------------------------------------------------
@@ -127,8 +127,6 @@ ALTER TABLE `medico`
 --
 -- Filtros para la tabla `anular`
 --
-ALTER TABLE `anular`
-  ADD CONSTRAINT `anular_ibfk_1` FOREIGN KEY (`IDMedico`,`Especialidad`,`Unidad`) REFERENCES `medico` (`RutMedico`, `Especialidad`, `Unidad`);
 
 --
 -- Filtros para la tabla `datos`

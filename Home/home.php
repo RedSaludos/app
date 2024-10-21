@@ -54,7 +54,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="/Home/home.html">
+                        <a href="/Home/home.php">
                             <i class='bx bx-home-alt icon'></i>
                             <span class="text nav-text">Inicio</span>
                         </a>

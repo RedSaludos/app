@@ -1,9 +1,9 @@
 <?php
 class Conexion {
-    private $host = "localhost";
-    private $db = "atrasos_redsalud";
+    private $host = "172.17.0.1";
+    private $db = "redsalud";
     private $user = "root";
-    private $pass = "";
+    private $pass = "rootpassword";
     public $conn;
 
     public function __construct() {
