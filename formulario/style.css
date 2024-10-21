@@ -1,0 +1,119 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Usa la fuente Poppins para todo el documento */
+}
+
+/* Variables CSS */
+:root {
+    --body-color: #E4E9F7; /* Color de fondo del cuerpo */
+    --sidebar-color: #FFF; /* Color de fondo de la barra lateral */
+    --primary-color: #695CFE; /* Color primario */
+    --primary-color-light: #F6F5FF; /* Color primario claro */
+    --toggle-color: #DDD; /* Color del toggle */
+    --text-color: #707070; /* Color del texto */
+    --tran-03: all 0.2s ease; /* Transición rápida */
+    --tran-04: all 0.3s ease; /* Transición media */
+    --tran-05: all 0.3s ease; /* Transición lenta */
+}
+
+/* Estilos del cuerpo del documento */
+body {
+    min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
+    background-color: var(--body-color); /* Color de fondo del cuerpo */
+    transition: var(--tran-05); /* Transición global */
+}
+
+/* Estilos de selección de texto */
+::selection {
+    background-color: var(--primary-color); /* Color de fondo al seleccionar texto */
+    color: #fff; /* Color del texto seleccionado */
+}
+
+/* Modo oscuro */
+body.dark {
+    --body-color: #18191a; /* Cambio de color de fondo en modo oscuro */
+    --sidebar-color: #242526; /* Cambio de color de la barra lateral en modo oscuro */
+    --primary-color: #3a3b3c; /* Cambio de color primario en modo oscuro */
+    --primary-color-light: #3a3b3c; /* Cambio de color primario claro en modo oscuro */
+    --toggle-color: #fff; /* Cambio de color del toggle en modo oscuro */
+    --text-color: #ccc; /* Cambio de color de texto en modo oscuro */
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+    position: fixed; /* Fija la barra lateral */
+    top: 0;
+    left: 0;
+    height: 100%; /* Altura completa */
+    width: 250px; /* Ancho inicial */
+    padding: 10px 14px;
+    background: var(--sidebar-color); /* Color de fondo de la barra lateral */
+    transition: var(--tran-05); /* Transición */
+    z-index: 100; /* Capa z-index */
+}
+
+.sidebar.close {
+    width: 88px; /* Ancho reducido al cerrar */
+}
+
+.sidebar li {
+    height: 50px; /* Altura de elementos de lista */
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 10px; /* Margen superior */
+}
+
+/* Otros estilos de la barra lateral y componentes específicos */
+
+/* Estilos del contenido principal */
+.main-content {
+    margin-left: 250px; /* Margen izquierdo igual al ancho de la barra lateral */
+    padding: 20px;
+}
+
+/* Estilos del formulario */
+.formulario {
+    max-width: 400px; /* Ancho máximo del formulario */
+    width: 80%;
+    background: #fff; /* Fondo blanco */
+    padding: 20px; /* Relleno */
+    border-radius: 24px; /* Borde redondeado */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 20px; /* Margen superior */
+}
+
+.formulario h2 {
+    color: #333; /* Color del título */
+    text-align: center; /* Alineación centrada */
+    font-size: 30px; /* Tamaño de fuente */
+    padding-top: 20px; /* Espaciado superior */
+    padding-bottom: 20px; /* Espaciado inferior */
+}
+
+.formulario .form-label {
+    color: #333; /* Color de las etiquetas del formulario */
+}
+
+.formulario .form-select {
+    width: 100%; /* Ancho completo */
+    font-size: medium; /* Tamaño de fuente medio */
+    padding: 10px; /* Relleno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Borde redondeado */
+    appearance: none; /* Apariencia */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2Ij4gPHBvbHlnb24gcG9pbnRzPSIwLDAsNSw1LDEwLDAiIHN0eWxlPSJmaWxsOiMwMDA7c3Ryb2tlOiMwMDA7c3Ryb2tlLXdpZHRoOjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7IiAvPiA8L3N2Zz4=') no-repeat right 10px center; /* Fondo con flecha desplegable */
+    background-size: 10px 6px; /* Tamaño de la flecha */
+}
+
+.formulario .form-select option:checked {
+    color: gray; /* Color del texto seleccionado */
+}

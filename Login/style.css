@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'); /* Importa la fuente Montserrat desde Google Fonts */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Configura la fuente predeterminada para todo el documento */
+}
+
+body{
+    background-color: #c9d6ff; /* Color de fondo del cuerpo */
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff); /* Gradiente lineal de fondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh; /* Altura completa del viewport */
+}
+
+.titulo{
+    top: 500px; /* Estilo específico para la clase .titulo */
+}
+
+.logo{
+    position: relative;
+    bottom: 20px; /* Posicionamiento relativo para .logo */
+    left: 0px;
+}
+
+.form-image-main{
+    width: 250px; /* Tamaño de imagen específico */
+}
+
+.container{
+    background-color: #fff; /* Color de fondo del contenedor */
+    border-radius: 200px; /* Borde redondeado */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35); /* Sombra */
+    position: relative;
+    overflow: hidden;
+    width: 768px; /* Ancho del contenedor */
+    max-width: 100%; /* Ancho máximo permitido */
+    min-height: 480px; /* Altura mínima */
+}
+
+.container p{
+    font-size: 14px; /* Tamaño de fuente para párrafos */
+    line-height: 20px; /* Altura de línea */
+    letter-spacing: 0.3px; /* Espaciado entre letras */
+    margin: 20px 0; /* Márgenes superior e inferior */
+}
+
+.container span{
+    font-size: 12px; /* Tamaño de fuente para spans */
+}
+
+.container a{
+    color: #ffffff; /* Color de texto para enlaces */
+    font-size: 13px; /* Tamaño de fuente para enlaces */
+    text-decoration: none; /* Sin subrayado para enlaces */
+    margin: 15px 0 10px; /* Márgenes superior, inferior y luego inferior */
+}
+
+.container button{
+    background-color: #009999; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    font-size: 12px; /* Tamaño de fuente del botón */
+    padding: 10px 45px; /* Relleno del botón */
+    border: 1px solid transparent; /* Borde del botón */
+    border-radius: 10px; /* Borde redondeado del botón */
+    font-weight: 600; /* Peso de la fuente */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Transformación de texto a mayúsculas */
+    margin-top: 10px; /* Margen superior del botón */
+    cursor: pointer; /* Cursor al pasar por encima */
+}
+
+.botonredireccion{
+    background-color: #009999; /* Color de fondo del botón de redirección */
+    color: #ffffff; /* Color de texto del botón de redirección */
+    font-size: 12px; /* Tamaño de fuente del botón de redirección */
+    padding: 10px 45px; /* Relleno del botón de redirección */
+    border: 1px solid transparent; /* Borde del botón de redirección */
+    border-radius: 10px; /* Borde redondeado del botón de redirección */
+    font-weight: 600; /* Peso de la fuente */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Transformación de texto a mayúsculas */
+    margin-top: 10px; /* Margen superior del botón de redirección */
+    cursor: pointer; /* Cursor al pasar por encima */
+}
+
+.container button.hidden{
+    background-color: transparent; /* Color de fondo transparente para botón oculto */
+    border-color: #fff; /* Color de borde para botón oculto */
+}
+
+.container form{
+    background-color: #fff; /* Color de fondo del formulario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px; /* Relleno interno del formulario */
+    height: 100%; /* Altura completa del formulario */
+}
+
+.container input{
+    background-color: #eee; /* Color de fondo de los inputs */
+    border: none; /* Sin borde para inputs */
+    margin: 8px 0; /* Márgenes superior e inferior de los inputs */
+    padding: 10px 15px; /* Relleno interno de los inputs */
+    font-size: 13px; /* Tamaño de fuente de los inputs */
+    border-radius: 8px; /* Borde redondeado de los inputs */
+    width: 100%; /* Ancho completo de los inputs */
+    outline: none; /* Sin contorno al seleccionar input */
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out; /* Transición suave */
+}
+
+.sign-in{
+    left: 0;
+    width: 50%; /* Ancho del formulario de inicio de sesión */
+    z-index: 2; /* Índice z para apilamiento */
+}
+
+.container.active .sign-in{
+    transform: translateX(100%); /* Mover formulario de inicio de sesión fuera de la vista */
+}
+
+.sign-up{
+    left: 0;
+    width: 50%; /* Ancho del formulario de registro */
+    opacity: 0; /* Opacidad inicial */
+    z-index: 1; /* Índice z para apilamiento */
+}
+
+.container.active .sign-up{
+    transform: translateX(100%); /* Mover formulario de registro fuera de la vista */
+    opacity: 1; /* Hacer visible el formulario de registro */
+    z-index: 5; /* Ajustar índice z para apilamiento */
+    animation: move 0.6s; /* Animación para el movimiento */
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.separacion{
+    margin: 10px 0; /* Márgenes superior e inferior para .separacion */
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%; /* Ancho del contenedor de alternancia */
+    height: 100%; /* Altura del contenedor de alternancia */
+    overflow: hidden; /* Ocultar desbordamiento */
+    transition: all 0.6s ease-in-out; /* Transición suave */
+    border-radius: 100px 0 0 100px; /* Borde redondeado */
+    z-index: 1000; /* Índice z para apilamiento */
+}
+
+.container.active .toggle-container{
+    transform: translateX(-100%); /* Mover contenedor de alternancia fuera de la vista */
+    border-radius: 0 150px 100px 0; /* Ajustar borde redondeado */
+}
+
+.toggle{
+    background-color: #009999; /* Color de fondo para la alternancia */
+    height: 100%; /* Altura completa */
+    background: linear-gradient(to left, #009999, #009999); /* Gradiente lineal para la alternancia */
+    color: #ffffff; /* Color de texto */
+    position: relative;
+    left: -100%; /* Posición inicial fuera de la vista */
+    width: 200%; /* Ancho extendido */
+    transform: translateX(0); /* Transformación de posición */
+    transition: all .0.1s ease-in-out; /* Transición suave */
+}
+
+.container.active .toggle{
+    transform: translateX(50%); /* Mover la alternancia a la vista */
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%; /* Ancho del panel de alternancia */
+    height: 100%; /* Altura del panel de alternancia */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px; /* Relleno interno del panel */
+    text-align: center; /* Alineación del texto */
+    top: 0;
+    transform: translateX(0); /* Posición inicial */
+    transition: all 0.6s ease-in-out; /* Transición suave */
+}
+
+.toggle-left{
+    transform: translateX(-200%); /* Mover el panel izquierdo fuera de la vista */
+}
+
+.container.active .toggle-left{
+    transform: translateX(0); /* Mover el panel izquierdo a la vista */
+}
+
+.toggle-right{
+    right: 0; /* Posición a la derecha */
+    transform: translateX(0); /* Posición inicial */
+}
+
+.container.active .toggle-right{
+    transform: translateX(200%); /* Mover el panel derecho fuera de la vista */
+}
+.btn{
+    background-color: #009999; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    font-size: 12px; /* Tamaño de fuente del botón */
+    padding: 10px 45px; /* Relleno del botón */
+    border: 1px solid transparent; /* Borde del botón */
+    border-radius: 10px; /* Borde redondeado del botón */
+    font-weight: 600; /* Peso de la fuente */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Transformación de texto a mayúsculas */
+    margin-top: 10px; /* Margen superior del botón */
+    cursor: pointer; /* Cursor al pasar por encima */
+}

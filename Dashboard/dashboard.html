@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Médico</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboardstyle.css">
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar close">
+        <header>
+            <!-- Logo and Text -->
+            <div class="image-text">
+                <span class="imagelogo">
+                    <img src="logo-red-salud.png" alt="Logo">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">RedSalud</span>
+                </div>
+            </div>
+            <!-- Toggle Button -->
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <!-- Menu Links -->
+        <div class="menu-bar">
+            <div class="menu">
+                <!-- Search Box -->
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Buscar paciente">
+                </li>
+
+                <!-- Navigation Links -->
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/Profile/Profile.html">
+                            <i class='bx bx-user icon'></i>
+                            <span class="text nav-text">Perfil</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/Home/home.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/Dashboard/dashboard.html">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Estadística de atención</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/Notificaciones/notificaciones.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notificaciones</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Logout and Dark Mode Toggle -->
+            <div class="bottom-content">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Salir</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Modo Oscuro</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section class="content">
+        <div class="main">
+            <!-- Statistics Icons -->
+            <ul class="iconos">
+                <li>
+                    <i class='bx bx-happy'></i>
+                    <span class="atendidos">
+                        <h3>243</h3>
+                        <p>Pacientes Atendidos</p>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx bx-meh'></i>
+                    <span class="atendidos">
+                        <h3>23</h3>
+                        <p>Pacientes en espera</p>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx bx-sad'></i>
+                    <span class="atendidos">
+                        <h3>243</h3>
+                        <p>Pacientes anulados</p>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx bx-happy'></i>
+                    <span class="atendidos">
+                        <h3>690</h3>
+                        <p>Pacientes Atendidos Totales</p>
+                    </span>
+                </li>
+            </ul>
+
+            <!-- Additional Data -->
+            <div class="bottom-data">
+                <!-- Recent Orders -->
+                <div class="orders">
+                    <div class="header">
+                        <i class='bx bx-receipt'></i>
+                        <h3>Próximos Pacientes</h3>
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Fecha de atención</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="caballero1.png">
+                                    <p>Ricardo Merino</p>
+                                </td>
+                                <td>14-01-2025</td>
+                                <td><span class="status pending">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="joaquin.png">
+                                    <p>Joaquín Méndez</p>
+                                </td>
+                                <td>25-08-2024</td>
+                                <td><span class="status pending">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="monica.png">
+                                    <p>Mónica Palma</p>
+                                </td>
+                                <td>15-06-2024</td>
+                                <td><span class="status completed">Completada</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Reminders -->
+                <div class="reminders">
+                    <div class="header">
+                        <i class='bx bx-note'></i>
+                        <h3>Recordatorios</h3>
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <ul class="task-list">
+                        <li class="completed">
+                            <div class="task-title">
+                                <i class='bx bx-check-circle'></i>
+                                <p>Cirugía a las 11:30 AM</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="completed">
+                            <div class="task-title">
+                                <i class='bx bx-check-circle'></i>
+                                <p>Pabellón 15:00</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="not-completed">
+                            <div class="task-title">
+                                <i class='bx bx-x-circle'></i>
+                                <p>Atención en Sede</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Médico</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="ProfileStyle.css">
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra lateral de navegación -->
+    <nav class="sidebar close">
+        <header>
+            <!-- Logotipo y nombre de la organización -->
+            <div class="image-text">
+                <span class="imagelogo">
+                    <img src="logo-red-salud.png" alt="Logo">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">RedSalud</span>
+                </div>
+            </div>
+            <!-- Icono para alternar la visibilidad de la barra lateral -->
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <!-- Menú de navegación -->
+        <div class="menu-bar mb-3">
+            <div class="menu">
+                <!-- Cuadro de búsqueda -->
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Buscar paciente">
+                </li>
+
+                <!-- Enlaces de navegación -->
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/Profile/Profile.html">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text">Perfil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/Home/home.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/Dashboard/dashboard.html">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Estadistica de <br> atencion</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/Notificaciones/notificaciones.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notificaciones</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contenido inferior de la barra lateral -->
+            <div class="bottom-content">
+                <!-- Enlace para salir -->
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Salir</span>
+                    </a>
+                </li>
+                <!-- Modo oscuro/claro -->
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Modo Oscuro</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <section class="home mb-3">
+        <div class="text mb-3">Mi Perfil</div>
+        <!-- Tarjeta de perfil -->
+        <div class="profile-card">
+           <div class="container mb-3">
+            <div class="image">
+                <img src="imagen doctor.png" alt="Profile Image" class="profile-img">
+            </div>
+            <div class="text-data">
+                <span class="name">Dr.Benjamin Herrera</span>
+                <span class="job">Cardiólogo</span>
+            </div>
+            <!-- Información personal -->
+            <div class="personal-info">
+                <p><b>Teléfono:</b> +56934526048</p>
+                <p><b>Email:</b> b.herrera@redsalud.com</p>
+                <p><b>Especialidad:</b> Cardiología Adulto</p>
+                <p><b>Experiencia:</b> 5 años</p>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="buttons">
+                <button class="button edit-profile-button">Editar Perfil</button>
+                <!--<button class="button message-button">Mensaje</button>-->
+            </div>
+            
+            <!-- Próximas citas médicas -->
+            <div class="appointments">
+                <h4>Próximas Citas Médicas</h4>
+                <ul>
+                    <li>5 Junio 2024, 10:00 AM - Paciente: María Gómez</li>
+                    <li>5 Junio 2024, 11:00 AM - Paciente: Pedro López</li>
+                    <li>5 Junio 2024, 02:00 PM - Paciente: Laura Fernández</li>
+                </ul>
+            </div>
+        </div> 
+            
+            <!-- Información del próximo paciente -->
+             <div class="container mb-3">
+                <div class="calendar">
+                    <h2>Proximo paciente</h2>
+                    <ul>
+                        <!-- Aquí se mostrarán los próximos pacientes -->
+                        <li><strong>Nombre:</strong> María Gómez</li>
+                        <li><strong>Telefono:</strong> +56988184828</li>
+                        <li><strong>Fecha:</strong> 13 de junio de 2024</li>
+                        <li><strong>Hora:</strong> 10:00 AM</li>
+                        <li><strong>Sede:</strong> RedSalud Providencia</li>
+                    </ul>
+                </div>
+             </div>
+        </div>
+
+    </section>
+
+    <!-- Modal para editar perfil -->
+    <div id="edit-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Perfil</h2>
+            <form id="edit-profile-form">
+                <label for="phone">Teléfono:</label>
+                <input type="text" id="phone" name="phone" placeholder="Ingrese su teléfono" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
+                
+                <label for="specialty">Especialidad:</label>
+                <input type="text" id="specialty" name="specialty" placeholder="Ingrese su especialidad" required>
+                
+                <label for="experience">Experiencia:</label>
+                <input type="text" id="experience" name="experience" placeholder="Ingrese su experiencia" required>
+                
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para mensaje 
+    <div id="message-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enviar Mensaje</h2>
+            <form id="message-form">
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>-->
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
