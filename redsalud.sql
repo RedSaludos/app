@@ -30,12 +30,12 @@ USE `redsalud`;
 --
 
 CREATE TABLE IF NOT EXISTS `agenda` (
-  `id_agenda` int(11) NOT NULL AUTO_INCREMENT,
+  `idagenda` int(11) NOT NULL AUTO_INCREMENT,
   `fecha` date NOT NULL,
   `paciente` varchar(100) NOT NULL,
   `rut` varchar(20) NOT NULL,
   `numero` varchar(10) NOT NULL,
-  PRIMARY KEY (`id_agenda`)
+  PRIMARY KEY (`idagenda`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 -- --------------------------------------------------------
