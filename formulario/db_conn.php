@@ -1,9 +1,9 @@
 <?php
 // Database credentials
-$servername = "localhost";
+$servername = "172.17.0.1";
 $username = "root";
-$password = "";
-$dbname = "atrasos_redsalud";
+$password = "rootpassword";
+$dbname = "redsalud";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

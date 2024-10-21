@@ -23,7 +23,7 @@ class Agenda {
     }
 // esta funcion trata que funcione para modificar alguno dde los datos
     public function actualizarDato($IDagenda, $fecha, $paciente, $rut, $numero, $estado) {
-        $sql = "UPDATE agenda SET fecha = ?, paciente = ?, rut = ?, numero = ?, Estado = ? WHERE IDagenda = ?";
+        $sql = "UPDATE agenda SET fecha = ?, paciente = ?, rut = ?, numero = ?, Estado = ? WHERE ID_agenda = ?";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("ssiisi", $fecha, $paciente, $rut, $numero, $estado, $IDagenda);
         return $stmt->execute();
